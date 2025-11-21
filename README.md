@@ -1,28 +1,22 @@
 # 📌 Actividad 2 
 
-Katerin Vanesa Lopez Moros
-
-Bayron Meza Guzman 
-
-Grupo de canvas #15
-
-Andres Felipe Callejas
-
-Big Data Grupo 61
+**Autores:** Katerin Vanesa Lopez Moros  
+Bayron Meza Guzman  
+Grupo 15  
+**Docente:** Andres Felipe Callejas  
+**Materia:** Big Data Grupo 61
 
 ## 🚀**Descripción:**
 En esta actividad se desarrolla una serie de puntos que tienen como objetivo principal recolectar un conjunto de datos y así desplegarlo sobre una infraestructura virtual, que en este caso en especial será Datadricks Community Edition, diseñando el esquema de almacenamiento, configurando la arquitectura básica, cargando datos desde un dataset y validando todo el procesamiento con Spark y SQL.
 
 ## 1️⃣ **Esquema** 
-Las entidad clave de este dataset es:
-Evento de accidente de tránsito (*Incidente*)
+Las entidad clave de este dataset son:
+Ubicación, Tiempo, Tipo de incidente e Indicente  
+Los campos claves son:  
+Llave primaria (PK) encontramos radicado que es el indicador unico del reporte de incidente  
+Los tipos de datos predominan las cadenas de texto (String) para las categorias y fechas hay datos númericos (double) para las coordenadas (integer) para las dimensiones de tiempo.  
+Y la nulabilidad a campos como mes_nombre  
 
-Los campos claves son: 
-Llave primaria (PK) encontramos radicado que es el indicador unico del reporte de incidente
-
-Los tipos de datos predominan las cadenas de texto (String) para las categorias y fechas hay datos númericos (double) para las coordenadas (integer) para las dimensiones de tiempo. 
-
-Y la nulabilidad a campos como mes_nombre
 
 Propón un DDL (Spark SQL) o una StructType (PySpark) que represente el esquema.
 
