@@ -14,20 +14,43 @@ Big Data Grupo 61
 En esta actividad se desarrolla una serie de puntos que tienen como objetivo principal recolectar un conjunto de datos y así desplegarlo sobre una infraestructura virtual, que en este caso en especial será Datadricks Community Edition, diseñando el esquema de almacenamiento, configurando la arquitectura básica, cargando datos desde un dataset y validando todo el procesamiento con Spark y SQL.
 
 ## 1️⃣ **Esquema** 
-Las entidades clave de este dataset son:
-Ubicación, Tiempo, Tipo de incidente e Incidente
+Las entidad clave de este dataset es:
+Evento de accidente de tránsito (*Incidente*)
 
 Los campos claves son: 
-Los *Categóricos* como clase, dia_nombre, barrio, comuna, diseno. Los *Numéricos* como Coordenadas (longitud, latitud). y *Fecha y hora* fecha, hora.
+Llave primaria (PK) encontramos radicado que es el indicador unico del reporte de incidente
 
-Y como llaves encontramos:
-cbml como llave primaria en ubicación y como llave foranea en incidente, fecha y hora como llaves primarias en tiempo y llaves foraneas en incidente y clase como llave primaria en tipo de incidente y como llave foranea en indicente. 
+Los tipos de datos predominan las cadenas de texto (String) para las categorias y fechas hay datos númericos (double) para las coordenadas (integer) para las dimensiones de tiempo. 
 
+Y la nulabilidad a campos como mes_nombre
 
 Propón un DDL (Spark SQL) o una StructType (PySpark) que represente el esquema.
 
 Incluye un diagrama simple (Mermaid/draw.io) o tabla de diccionario de datos en una celda Markdown.
 
+| Campo | Tipo de dato | Descripción | ¿Puede ser null? |
+|-----------|-----------|-----------|-----------|
+OBJECTID|Integer|Identificador único del registro (ID técnico)|No
+Shape|String|Representación geométrica|No
+radicado|Long|Número de radicado del expediente (ID Negocio)|No
+fecha|Date/Timestamp|Fecha del accidente|No
+hora|String|Hora del evento (formato 12h AM/PM)|Sí
+dia|Integer|Día del mes|No
+periodo|Integer|Año del evento|No
+clase|String|"Tipo de accidente"|Sí
+direccion|String|Dirección normalizada|Sí
+direccion_enc|String|Dirección codificada para geolocalización|Sí
+cbml|String|Código de manzana/localización|Sí
+tipo_geocod|String|Método usado para geocodificar|Sí
+gravedad|String|Severidad del incidente|No
+barrio|String|Nombre del barrio|Sí
+comuna|String|Nombre de la comuna o zona|Sí
+diseno|String|"Diseño de la vía (Tramo, Intersección)."|Sí
+dia_nombre|String|Día de la semana|No
+mes|Integer|Número del mes|No
+mes_nombre|String|Nombre del mes|Sí
+longitud|Double|Coordenada geográfica X|Sí
+latitud|Double|Coordenada geográfica Y|Sí
 ## 2️⃣ **Configuración de Databricks**
 Debes mostrar paso a paso (con capturas y/o salidas de celdas) la configuración del entorno:
 
