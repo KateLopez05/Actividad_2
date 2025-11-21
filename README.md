@@ -17,11 +17,8 @@ Llave primaria (PK) encontramos radicado que es el indicador unico del reporte d
 Los tipos de datos predominan las cadenas de texto (String) para las categorias y fechas hay datos númericos (double) para las coordenadas (integer) para las dimensiones de tiempo.  
 Y la nulabilidad a campos como mes_nombre  
 
-
-Propón un DDL (Spark SQL) o una StructType (PySpark) que represente el esquema.
-
-Incluye un diagrama simple (Mermaid/draw.io) o tabla de diccionario de datos en una celda Markdown.
-
+Esquema ![Esquema](docs/Esquema.png)
+Diccionario de datos  
 | Campo | Tipo de dato | Descripción | ¿Puede ser null? |
 |-----------|-----------|-----------|-----------|
 OBJECTID|Integer|Identificador único del registro (ID técnico)|No
@@ -45,6 +42,7 @@ mes|Integer|Número del mes|No
 mes_nombre|String|Nombre del mes|Sí
 longitud|Double|Coordenada geográfica X|Sí
 latitud|Double|Coordenada geográfica Y|Sí
+
 ## 2️⃣ **Configuración de Databricks**
 Debes mostrar paso a paso (con capturas y/o salidas de celdas) la configuración del entorno:
 
