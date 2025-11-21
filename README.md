@@ -16,9 +16,8 @@ Los campos claves son:
 Llave primaria (PK) encontramos radicado que es el indicador unico del reporte de incidente  
 Los tipos de datos predominan las cadenas de texto (String) para las categorias y fechas hay datos númericos (double) para las coordenadas (integer) para las dimensiones de tiempo.  
 Y la nulabilidad a campos como mes_nombre  
-
-Esquema ![Esquema](docs/Esquema.png)
-Diccionario de datos  
+![Esquema](docs/Esquema.png)  
+**Diccionario de datos**  
 | Campo | Tipo de dato | Descripción | ¿Puede ser null? |
 |-----------|-----------|-----------|-----------|
 OBJECTID|Integer|Identificador único del registro (ID técnico)|No
