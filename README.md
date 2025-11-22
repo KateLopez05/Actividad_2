@@ -10,7 +10,7 @@ Grupo 15
 En esta actividad se desarrolla una serie de puntos que tienen como objetivo principal recolectar un conjunto de datos y así desplegarlo sobre una infraestructura virtual, que en este caso en especial será Datadricks Community Edition, diseñando el esquema de almacenamiento, configurando la arquitectura básica, cargando datos desde un dataset y validando todo el procesamiento con Spark y SQL.
 
 ## 1️⃣ **Esquema** 
-Las entidad clave de este dataset son:
+Las entidades clave de este dataset son:
 Ubicación, Tiempo, Tipo de incidente e Indicente  
 Los campos claves son:  
 Llave primaria (PK) encontramos radicado que es el indicador unico del reporte de incidente  
@@ -43,6 +43,8 @@ longitud|Double|Coordenada geográfica X|Sí
 latitud|Double|Coordenada geográfica Y|Sí
 
 ## 2️⃣ **Configuración de Databricks**
+Los pasos que deber seguir para configurar Databricks Community Edition, Free version son:  
+**Paso 1:** Buscamos en el navegador Databricks  Community Edition y abrimos la primera opción  
 Debes mostrar paso a paso (con capturas y/o salidas de celdas) la configuración del entorno:
 
 Versión de Databricks Runtime, tipo de clúster, núcleos/RAM, autoscaling.
