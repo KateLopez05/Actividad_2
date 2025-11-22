@@ -81,16 +81,12 @@ En este caso se hizo por la opción B (manual), por medio de la descarga local y
 ➡️ De aquí en adelante tanto como la lectura del archivo, la creación de la tabla y el describe se encuentran en el ipynb.  
 
 ## ⚠️ **Validaciones**
-Realiza validaciones en Spark (PySpark) y en SQL con salidas visibles:
-
-Metadatos: %sql DESCRIBE TABLE, SHOW CREATE TABLE; en Spark: df.printSchema().
-
-Descripción de datos: df.describe().show() y/o %sql con funciones agregadas.
-
-Consultas SELECT y GROUP BY: equivalentes en Spark y SQL comparando resultados.
-
-Conteos y muestras: COUNT(*), LIMIT, filtros por campo.
-
-Explica brevemente cada resultado y su propósito de validación.
+➡️ Todas las validaciones se encuentran dentro del ipynb
 
 ## 🔝 **Ventajas y Desventajas entre Spark y SQL**
+|  | SPARK | SQL |
+|-----------|-----------|-----------|
+| **Ventajas** | 1. Para los bucles, condicionales, manejo de errores es mejor.  2. Tiene la capacidad de implementar una libreria nativa para modelos de Machine Learning.  3. Son muchos más faciles la depuración, pudiendo implementar pruebas unitarias. | 1. Es de fácil uso.  2. Le puedes decir al motor que datos quieres ver y como los quieres ver en consola.  3. Tienes tareas de resumen como sumar, agrupar, contar. |
+| **Desventajas** | 1. Debe traducir constantemente los datos, (serializar y deserializar) lo que hace que se sobrecarge.  2. Para las tareas de agregación tiene un codigo mucho más largo y complejo que SQL.  3. Las librerias, si el código depende de librerias se deben instalar en todos los nodos del cluster. | 1. Los bucles con variables complejas se vuelve poco lejible.  2. Para los esquemas suele requerir que la estructura de la tabla esté definida antes de cargar datos.  3. Es dificil poner punto de interrupción en medio de una consulta grande. |
+
+Por lo que podemos concluir que ambas tienen lados fuertes y lados en los que es más compplejo su uso, más en lo particular para este tipo de trabajo preferimos SQL.
