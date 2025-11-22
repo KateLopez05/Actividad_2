@@ -9,7 +9,7 @@ Grupo 15
 ## 🚀**Descripción:**
 En esta actividad se desarrolla una serie de puntos que tienen como objetivo principal recolectar un conjunto de datos y así desplegarlo sobre una infraestructura virtual, que en este caso en especial será Datadricks Community Edition, diseñando el esquema de almacenamiento, configurando la arquitectura básica, cargando datos desde un dataset y validando todo el procesamiento con Spark y SQL.
 
-## 1️⃣ **Esquema** 
+## ✏️ **Esquema** 
 Las entidades clave de este dataset son:
 Ubicación, Tiempo, Tipo de incidente e Indicente  
 Los campos claves son:  
@@ -17,7 +17,7 @@ Llave primaria (PK) encontramos radicado que es el indicador unico del reporte d
 Los tipos de datos predominan las cadenas de texto (String) para las categorias y fechas hay datos númericos (double) para las coordenadas (integer) para las dimensiones de tiempo.  
 Y la nulabilidad a campos como mes_nombre  
 ![Esquema](docs/Esquema.png)  
-**Diccionario de datos**  
+**📖Diccionario de datos**  
 | Campo | Tipo de dato | Descripción | ¿Puede ser null? |
 |-----------|-----------|-----------|-----------|
 OBJECTID|Integer|Identificador único del registro (ID técnico)|No
@@ -42,33 +42,45 @@ mes_nombre|String|Nombre del mes|Sí
 longitud|Double|Coordenada geográfica X|Sí
 latitud|Double|Coordenada geográfica Y|Sí
 
-## 2️⃣ **Configuración de Databricks**
+➡️ El DDL se encuentra dentro del ipynb
+
+## 🔧 **Configuración de Databricks**
 Los pasos que deber seguir para configurar Databricks Community Edition, Free version son:  
-**Paso 1:** Buscamos en el navegador Databricks  Community Edition y abrimos la primera opción  
-Debes mostrar paso a paso (con capturas y/o salidas de celdas) la configuración del entorno:
 
-Versión de Databricks Runtime, tipo de clúster, núcleos/RAM, autoscaling.
+**1️⃣Paso 1:** Buscamos en el navegador Databricks  Community Edition y abrimos la primera opción.
+![Paso 1](docs/1.png)  
+**2️⃣Paso 2:** Estando dentro damos click en "Sign Up Free Edition".  
+![Paso 2](docs/2.png)  
+**3️⃣Paso 3:** Continuamos con nuestra cuenta de Google o si lo preferimos con una cuenta de Microsoft.  
+![Paso 3](docs/4.png)  
+**4️⃣Paso 4:** Nos aparecerá de la siguiente manera con nuestro email más "- Free edition" y continuamos.  
+![Paso 4](docs/5.png)  
+**5️⃣Paso 5:** Nos aparecerá un par de pasos de verificación para continuar y proteger nuestra cuenta, continuamos con ellos.
+![Paso 5](docs/6.png)  
+**6️⃣Paso 6:** Luego de eso nos verificará y nos dará acceso a nuestra nueva cuenta en Databricks.  
+**7️⃣Paso 7:** Ya para este punto echaremos un vistazo a la cuenta, nos dirigimmos a la barra lateral izquiera en la opción "Compute".  
+![Paso 7](docs/7.png)  
+Y podemos ver que ya por defecto nos provee un servidor listo solo para levantar (Se hace en el boton de play) y empezar a trabajar.  
+![Paso 7](docs/8.png)  
+Ya desplegado el servidor de Big Data podemos crear carpetas, notebooks, querys, y más.  
+Esto llendo a la barra lateral izquierda en workspace, Create.  
+![Paso 8](docs/9.png)  
 
-Versiones de Python/Spark: spark.version, spark.sparkContext.getConf().getAll().
+**Mostramos la configuración de la cuenta**  
+![Configuracion](docs/10.png)  
 
-Estructura de almacenamiento (DBFS o Volumes) que utilizarás.
+**📦 Estructura de almacenamiento**  
+Se utilizará **DBFS** para cargar archivos CSV temporales durante el desarrollo.  
+Los datos finales se almacenarán en **Volumes** dentro del catálogo `catalog_movilidad`, esquema `schema_transito`, volumen `big_data`.  
+Ruta: `/Volumes/workspace/big_data/actividad2/dataset.csv`  
+➡️ Versiones de Python/Spark dentro del ipynb
 
-Sugerencia: usa celdas Python para imprimir la configuración y celdas %md para documentar.
+## 🔗 **Ingesta desde Kaglee + creación de tabla**
+Obtención del dataset:  
+En este caso se hizo por la opción B (manual), por medio de la descarga local y carga al archivo a DBFS como lo dice en el punto anterior.  
+➡️ De aquí en adelante tanto como la lectura del archivo, la creación de la tabla y el describe se encuentran en el ipynb.  
 
-## 3️⃣ **Ingesta desde Kaglee + creación de tabla**
-Obtención del dataset:
-
-Opción A (API Kaggle): instala kaggle, configura el token y descarga al workspace/DBFS.
-
-Opción B (Manual/URL): descarga local y carga el archivo a DBFS (UI: Upload a /FileStore o Volumes).
-
-Carga en Spark: lee el archivo (CSV/JSON/Parquet) con spark.read aplicando el esquema diseñado.
-
-Persistencia: crea una tabla (saveAsTable o CREATE TABLE USING) y muestra %sql DESCRIBE TABLE.
-
-Incluye capturas/salidas de lectura, recuentos y confirmación de la ruta/tabla creada.
-
-## 4️⃣ **Validaciones**
+## ⚠️ **Validaciones**
 Realiza validaciones en Spark (PySpark) y en SQL con salidas visibles:
 
 Metadatos: %sql DESCRIBE TABLE, SHOW CREATE TABLE; en Spark: df.printSchema().
@@ -81,4 +93,4 @@ Conteos y muestras: COUNT(*), LIMIT, filtros por campo.
 
 Explica brevemente cada resultado y su propósito de validación.
 
-## 5️⃣ **Ventajas y Desventajas entre Spark y SQL**
+## 🔝 **Ventajas y Desventajas entre Spark y SQL**
