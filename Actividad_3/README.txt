@@ -1,4 +1,4 @@
-Actividad 3 
+📌 Actividad 3 
 Proyecto integrado Big Data
 
 
@@ -33,6 +33,7 @@ PUNTO 4
 Gráfico 1: Los choques representan la mayoría de los eventos, sugiriendo problemas de congestion en las vías y el riesgo está entre 2 eventos frecuentes (choques) y eventos graves (atropellos) lo cual es vital para salvar las vidas o mejorar el trafico vehicular.
 
 Grafico 2: Un hallazgo en este gráfico es el "efecto fin de semana" ya que típicamente observamos una caída notable el domingo o sea un menor flujo vehicular y un manejo progresivo hacia el viernes, lo cual dicta el cuando se requiere mayor operatividad y control en las calles.
+
 
 
 
