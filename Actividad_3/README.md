@@ -53,4 +53,11 @@ Se observa dentro del notebook.
 
 ➡️ **Grafico 2:** Un hallazgo en este gráfico es el "efecto fin de semana" ya que típicamente observamos una caída notable el domingo o sea un menor flujo vehicular y un manejo progresivo hacia el viernes, lo cual dicta el cuando se requiere mayor operatividad y control en las calles.
 
-## 🔗 **Enlace al video:**
+## 🔗 **Video explicativo:**
+- **El Desafío de los Datos Crudos:** Iniciamos con un dataset que presentaba inconsistencias críticas: coordenadas GPS en cero, nulos y textos sin estandarizar, lo cual impedía cualquier análisis espacial fiable.
+- **Ingeniería y Limpieza (SQL):** Mediante consultas SQL avanzadas, normalizamos las categorías y aplicamos filtros estadísticos (IQR) para descartar ubicaciones erróneas, recuperando la calidad del dato geográfico.
+- **La Realidad del Volumen (Pareto):** Al visualizar los tipos de incidentes, confirmamos la Ley de Pareto: los 'Choques' (solo daños materiales) representan la gran mayoría de los casos, indicando un problema estructural de congestión.
+- **Patrones Temporales de Riesgo:** El análisis por día de la semana reveló ciclos claros de siniestralidad (ej. picos en viernes/sábado), permitiéndonos diferenciar entre el tráfico rutinario laboral y el riesgo social de fin de semana.
+- **Impacto en la Toma de Decisiones:** Esta transformación de datos permite a la Secretaría de Movilidad pasar de la reacción a la prevención, asignando agentes y recursos en los días y zonas exactas donde la evidencia muestra mayor riesgo.
+  
+**Enlace al video:**
