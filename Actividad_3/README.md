@@ -60,4 +60,5 @@ Se observa dentro del notebook.
 - **Patrones Temporales de Riesgo:** El análisis por día de la semana reveló ciclos claros de siniestralidad (ej. picos en viernes/sábado), permitiéndonos diferenciar entre el tráfico rutinario laboral y el riesgo social de fin de semana.
 - **Impacto en la Toma de Decisiones:** Esta transformación de datos permite a la Secretaría de Movilidad pasar de la reacción a la prevención, asignando agentes y recursos en los días y zonas exactas donde la evidencia muestra mayor riesgo.
   
-**Enlace al video:**
+**Enlace al video:** https://drive.google.com/file/d/1wDCdLknGPbSvLdqhLc6F98YmnBlZJE-M/view?usp=sharing 
+
